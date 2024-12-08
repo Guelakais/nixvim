@@ -1,11 +1,11 @@
 {
   plugins.obsidian = {
-    enable = false;
+    enable = true;
     settings = {
       workspaces = [
         {
           name = "SecondBrain";
-          path = "~/projects/personal/SecondBrain";
+          path = "~/obsidian_backup";
         }
       ];
       templates = {
