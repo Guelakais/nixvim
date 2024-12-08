@@ -18,9 +18,12 @@
         gopls.enable = true;
         html.enable = true;
         jsonls.enable = true;
+        julials.enable = true;
         lua_ls.enable = true;
         marksman.enable = true;
         nil_ls.enable = true;
+        nushell.enable = true;
+        openscad_ls.enable = true;
         ruff.enable = true;
         ts_ls.enable = true;
         rust_analyzer = {
