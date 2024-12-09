@@ -10,6 +10,16 @@
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
     };
+    # color tools
+    minty = {
+      url = "github:NvChad/minty";
+      flake = false;
+    };
+
+    volt = {
+      url = "github:NvChad/volt";
+      flake = false;
+    };
   };
 
   outputs =
@@ -38,13 +48,17 @@
         }:
         let
           nixvimLib = nixvim.lib.${system};
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
             inherit pkgs;
             module = import ./config; # import the module directly
             # You can use `extraSpecialArgs` to pass additional arguments to your module files
             extraSpecialArgs = {
-              # inherit (inputs) foo;
+              inherit inputs;
             };
           };
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
