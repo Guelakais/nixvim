@@ -1,12 +1,24 @@
 { pkgs, ... }:
 {
   plugins = {
-    conform-nvim = {
+    conform-nvim.settings.formatters_by_ft.rust = [ "rustfmt" ];
+    crates-nvim = {
       enable = true;
-      settings = {
-        formatters_by_ft.rust = [ "rustfmt" ];
+      extraOptions = {
+        completion = {
+          crates = {
+            enabled = true;
+          };
+        };
+        lsp = {
+          enabled = true;
+          actions = true;
+          completion = true;
+          hover = true;
+        };
       };
     };
+
     rustaceanvim = {
       enable = true;
       settings = {
