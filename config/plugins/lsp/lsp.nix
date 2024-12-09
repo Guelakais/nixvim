@@ -32,11 +32,6 @@
         };
         ruff.enable = true;
         ts_ls.enable = true;
-        rust_analyzer = {
-          enable = true;
-          installCargo = true;
-          installRustc = true;
-        };
         terraformls.enable = true;
         typst_lsp.enable = true;
         helm_ls = {
