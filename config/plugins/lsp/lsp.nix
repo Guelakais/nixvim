@@ -18,12 +18,18 @@
         gopls.enable = true;
         html.enable = true;
         jsonls.enable = true;
-        julials.enable = true;
+        julials = {
+          enable = true;
+          package = null;
+        };
         lua_ls.enable = true;
         marksman.enable = true;
         nil_ls.enable = true;
         nushell.enable = true;
-        openscad_ls.enable = true;
+        openscad_ls = {
+          enable = true;
+          package = null;
+        };
         ruff.enable = true;
         ts_ls.enable = true;
         rust_analyzer = {
