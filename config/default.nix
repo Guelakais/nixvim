@@ -29,7 +29,8 @@ _: {
     ./plugins/editor/copilot-chat.nix
     ./plugins/editor/navic.nix
     #./plugins/editor/codeium.nix
-
+    # Extras
+    ./plugins/extras/crates.nix
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
