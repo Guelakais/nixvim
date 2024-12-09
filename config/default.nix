@@ -28,7 +28,7 @@ _: {
     ./plugins/editor/todo-comments.nix
     ./plugins/editor/copilot-chat.nix
     ./plugins/editor/navic.nix
-    #./plugins/editor/codeium.nix
+    ./plugins/editor/codeium.nix
     # Extras
     ./plugins/extras/rust.nix
     ./plugins/extras/jupytext.nix
