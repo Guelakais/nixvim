@@ -1,3 +1,5 @@
 {
-  plugins.jupytext.enable = true;
+  plugins.jupytext = {
+    enable = false;
+  };
 }
