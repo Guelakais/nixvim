@@ -8,7 +8,7 @@
       settings = {
         autoEnableSources = true;
         experimental = {
-          ghost_text = false;
+          ghost_text = true;
         };
         performance = {
           debounce = 60;
@@ -80,7 +80,7 @@
       enable = true;
     }; # snippets
     cmp-cmdline = {
-      enable = false;
+      enable = true;
     }; # autocomplete for cmdline
   };
   extraConfigLua = ''
