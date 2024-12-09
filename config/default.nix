@@ -30,8 +30,7 @@ _: {
     ./plugins/editor/navic.nix
     #./plugins/editor/codeium.nix
     # Extras
-    ./plugins/extras/crates.nix
-    ./plugins/extras/rustacean.nix
+    ./plugins/extras/rust.nix
     ./plugins/extras/jupytext.nix
     # UI plugins
     ./plugins/ui/bufferline.nix
