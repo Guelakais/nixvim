@@ -31,6 +31,7 @@ _: {
     #./plugins/editor/codeium.nix
     # Extras
     ./plugins/extras/crates.nix
+    #./plugins/extras/rustacean.nix
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
