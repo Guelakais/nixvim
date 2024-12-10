@@ -6,6 +6,12 @@ This repository contains my personal configuration NixVim, a Neovim configuratio
 
 ## How to use
 
+### local use
+
+You can either run `nix run .` in the top-level directory of that repository, if you have cloned it, or you can run `nix run github:Guelakais/nixvim`.
+
+### Via Flake based configuration management installation
+
 You can use this flake as an input:
 
 ```nix
@@ -14,6 +20,16 @@ You can use this flake as an input:
         nixvim.url = "github:Guelakais/nixvim"
     };
 }
+```
+
+Later, you'll have to pass the inputs to your output modules:
+
+```nix
+nixosConfigurations.Azrael = nixpkgs.lib.nixosSystem {
+    specialArgs = {
+          inherit inputs;
+        }; # Pass inputs to modules
+};
 ```
 
 You can then install the package either normally or through home-manager.
