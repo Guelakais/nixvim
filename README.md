@@ -86,6 +86,8 @@ home-manager.users.<user>.home.packages = [
 - `copilot-chat.nix`: Configures the Copilot Chat plugin for interacting with GitHub Copilot.
 - `navic.nix`: Configures the Navic plugin, shows the current code context.
 
+* `codeium.nix` Configures the codeium plugin integration.
+
 ### UI Plugins
 
 - `bufferline.nix`: Configures the Bufferline plugin for enhanced buffer/tab display.
