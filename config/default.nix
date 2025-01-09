@@ -32,6 +32,7 @@ _: {
     # Extras
     ./plugins/extras/rust.nix
     ./plugins/extras/jupytext.nix
+    ./plugins/extras/typst.nix
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
