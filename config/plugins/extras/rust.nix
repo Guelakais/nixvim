@@ -16,6 +16,7 @@
         };
         tools.enable_clippy = true;
         server = {
+          standalone = false;
           default_settings = {
             inlayHints = {
               lifetimeElisionHints = {
@@ -24,7 +25,7 @@
             };
             rust-analyzer = {
               cargo = {
-                allFeatures = true;
+                allFeatures = false;
               };
               check = {
                 command = "clippy";
