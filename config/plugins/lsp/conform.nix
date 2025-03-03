@@ -123,6 +123,7 @@
           ];
           json = [ "jq" ];
           "_" = [ "trim_whitespace" ];
+          rust = [ "rustfmt" ];
         };
 
         formatters = {
