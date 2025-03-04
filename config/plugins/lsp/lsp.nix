@@ -17,22 +17,6 @@
         ansiblels.enable = true;
         gopls.enable = true;
         html.enable = true;
-        jsonls.enable = true;
-        julials = {
-          enable = true;
-          package = null;
-        };
-        lua_ls.enable = true;
-        marksman.enable = true;
-        nil_ls.enable = true;
-        nushell.enable = true;
-        openscad_ls = {
-          enable = true;
-          package = null;
-        };
-        ruff.enable = true;
-        ts_ls.enable = true;
-        terraformls.enable = true;
         helm_ls = {
           enable = true;
           extraOptions = {
@@ -45,6 +29,19 @@
             };
           };
         };
+        jsonls.enable = true;
+        julials = {
+          enable = true;
+          package = null;
+        };
+        lua_ls.enable = true;
+        marksman.enable = true;
+        nil_ls.enable = true;
+        nushell.enable = true;
+        ruff.enable = true;
+        terraformls.enable = true;
+        tinymist.enable = true;
+        ts_ls.enable = true;
         yamlls = {
           enable = true;
           extraOptions = {
