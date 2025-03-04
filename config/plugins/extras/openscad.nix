@@ -1,0 +1,3 @@
+{
+  plugins.openscad.enable = true;
+}

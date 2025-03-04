@@ -33,7 +33,7 @@ _: {
     ./plugins/extras/dap.nix
     ./plugins/extras/rust.nix
     ./plugins/extras/jupytext.nix
-    ./plugins/extras/typst.nix
+    ./plugins/extras/openscad.nix
     # UI plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
