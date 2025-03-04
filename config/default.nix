@@ -30,6 +30,7 @@ _: {
     ./plugins/editor/navic.nix
     ./plugins/editor/codeium.nix
     # Extras
+    ./plugins/extras/dap.nix
     ./plugins/extras/rust.nix
     ./plugins/extras/jupytext.nix
     ./plugins/extras/typst.nix
