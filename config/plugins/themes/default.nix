@@ -21,10 +21,14 @@
         no_underline = false;
         transparent_background = true;
         integrations = {
+          beacon = true;
           cmp = true;
-          notify = true;
+          dap = true;
+          fidget = true;
           gitsigns = true;
+          markdown = true;
           neotree = true;
+          notify = true;
           which_key = true;
           illuminate = {
             enabled = true;
@@ -47,17 +51,17 @@
               background = true;
             };
             virtual_text = {
-              errors = [ "italic" ];
-              hints = [ "italic" ];
-              information = [ "italic" ];
-              warnings = [ "italic" ];
-              ok = [ "italic" ];
+              errors = ["italic"];
+              hints = ["italic"];
+              information = ["italic"];
+              warnings = ["italic"];
+              ok = ["italic"];
             };
             underlines = {
-              errors = [ "underline" ];
-              hints = [ "underline" ];
-              information = [ "underline" ];
-              warnings = [ "underline" ];
+              errors = ["underline"];
+              hints = ["underline"];
+              information = ["underline"];
+              warnings = ["underline"];
             };
           };
         };
