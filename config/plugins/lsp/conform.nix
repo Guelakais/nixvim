@@ -2,8 +2,7 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   config = {
     extraConfigLuaPre =
       # lua
@@ -63,33 +62,33 @@
             if not slow_format_filetypes[vim.bo[bufnr].filetype] then
               return
             end
-            return { lsp_fallback = true }
+            return { async = true, timeout_ms = 5000 }  -- Increased timeout for large files
           end
         '';
         notify_on_error = true;
         formatters_by_ft = {
-          html = [ "prettier" ];
-          css = [ "prettier" ];
-          javascript = [ "prettier" ];
-          typescript = [ "prettier" ];
+          html = ["prettier"];
+          css = ["prettier"];
+          javascript = ["prettier"];
+          typescript = ["prettier"];
           python = [
             "black"
             "isort"
           ];
-          lua = [ "stylua" ];
-          nix = [ "alejandra" ];
-          markdown = [ "prettier" ];
-          yaml = [ "yamlfmt" ];
-          terraform = [ "tofu_fmt" ];
-          bicep = [ "bicep" ];
+          lua = ["stylua"];
+          nix = ["alejandra"];
+          markdown = ["prettier"];
+          yaml = ["yamlfmt"];
+          terraform = ["tofu_fmt"];
+          bicep = ["bicep"];
           bash = [
             "shellcheck"
             "shellharden"
             "shfmt"
           ];
-          json = [ "prettier" ];
-          "_" = [ "trim_whitespace" ];
-          rust = [ "rustfmt" ];
+          json = ["prettier"];
+          "_" = ["trim_whitespace"];
+          rust = ["rustfmt"];
         };
 
         formatters = {
@@ -126,9 +125,10 @@
           bicep = {
             command = "${lib.getExe pkgs.bicep}";
           };
-          #yamlfmt = {
-          #  command = "${lib.getExe pkgs.yamlfmt}";
-          #};
+          rustfmt = {
+            command = "${lib.getExe pkgs.rustfmt}";
+            args = ["--edition" "2024"];
+          };
         };
       };
     };
