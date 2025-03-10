@@ -14,6 +14,10 @@
       followCurrentFile = {
         enabled = true;
       };
+      filteredItems.alwaysShow = [
+        ".gitignore"
+        "flake.nix"
+      ];
     };
 
     defaultComponentConfigs = {
@@ -38,6 +42,7 @@
         };
       };
     };
+    window.position = "left";
   };
 
   keymaps = [

@@ -8,7 +8,7 @@
     extraConfigLuaPre =
       # lua
       ''
-        local slow_format_filetypes = {}
+        local slow_format_filetypes = {rust =true}
 
         vim.api.nvim_create_user_command("FormatDisable", function(args)
            if args.bang then
@@ -48,19 +48,11 @@
             if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
               return
             end
-
             if slow_format_filetypes[vim.bo[bufnr].filetype] then
               return
             end
-
-            local function on_format(err)
-              if err and err:match("timeout$") then
-                slow_format_filetypes[vim.bo[bufnr].filetype] = true
-              end
-            end
-
-            return { timeout_ms = 200, lsp_fallback = true }, on_format
-           end
+            return { timeout_ms = 1000, lsp_fallback = true }
+          end
         '';
 
         format_after_save = ''
@@ -68,60 +60,34 @@
             if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
               return
             end
-
             if not slow_format_filetypes[vim.bo[bufnr].filetype] then
               return
             end
-
             return { lsp_fallback = true }
           end
         '';
         notify_on_error = true;
         formatters_by_ft = {
-          html = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          css = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          javascript = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          typescript = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
+          html = [ "prettier" ];
+          css = [ "prettier" ];
+          javascript = [ "prettier" ];
+          typescript = [ "prettier" ];
           python = [
             "black"
             "isort"
           ];
           lua = [ "stylua" ];
-          nix = [ "nixfmt-rfc-style" ];
-          markdown = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          yaml = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          terraform = [ "terraform_fmt" ];
+          nix = [ "alejandra" ];
+          markdown = [ "prettier" ];
+          yaml = [ "yamlfmt" ];
+          terraform = [ "tofu_fmt" ];
           bicep = [ "bicep" ];
           bash = [
             "shellcheck"
             "shellharden"
             "shfmt"
           ];
-          json = [ "jq" ];
+          json = [ "prettier" ];
           "_" = [ "trim_whitespace" ];
           rust = [ "rustfmt" ];
         };

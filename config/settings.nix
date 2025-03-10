@@ -9,9 +9,7 @@
         vim.fn.sign_define("diagnosticsigninfo", { text = " ", texthl = "diagnosticinfo", linehl = "", numhl = "" })
       '';
 
-    clipboard = {
-      providers.wl-copy.enable = true;
-    };
+    clipboard.providers.wl-copy.enable = true;
 
     opts = {
       # Show line numbers

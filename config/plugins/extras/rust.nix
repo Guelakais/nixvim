@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   plugins = {
+    bacon.enable = true;
     crates = {
       enable = true;
       settings = {
@@ -8,7 +9,6 @@
         smart_insert = true;
       };
     };
-    bacon.enable = true;
     rustaceanvim = {
       enable = true;
       settings = {
