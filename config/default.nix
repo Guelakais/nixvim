@@ -11,7 +11,6 @@ _: {
 
     # Completion
     ./plugins/cmp/cmp.nix
-
     ./plugins/cmp/lspkind.nix
     ./plugins/cmp/autopairs.nix
     ./plugins/cmp/schemastore.nix
@@ -31,7 +30,6 @@ _: {
     # Extras
     ./plugins/extras/dap.nix
     ./plugins/extras/rust.nix
-    ./plugins/extras/jupytext.nix
     ./plugins/extras/openscad.nix
     # UI plugins
     ./plugins/ui/bufferline.nix
