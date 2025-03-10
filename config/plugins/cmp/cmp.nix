@@ -55,7 +55,7 @@
             priority = 5;
           }
           {
-            name = "copilot";
+            name = "codeium";
             priority = 60;
           }
           {

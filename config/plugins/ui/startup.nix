@@ -57,11 +57,6 @@
             "fe"
           ]
           [
-            " Copilot Chat"
-            "CopilotChat"
-            "ct"
-          ]
-          [
             "󰧑 SecondBrain"
             "edit ~/projects/personal/SecondBrain"
             "sb"
