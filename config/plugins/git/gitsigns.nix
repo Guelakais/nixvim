@@ -3,24 +3,12 @@ _: {
     enable = true;
     settings = {
       signs = {
-        add = {
-          text = " ";
-        };
-        change = {
-          text = " ";
-        };
-        delete = {
-          text = " ";
-        };
-        untracked = {
-          text = "";
-        };
-        topdelete = {
-          text = "󱂥 ";
-        };
-        changedelete = {
-          text = "󱂧 ";
-        };
+        added.text = " ";
+        change.text = " ";
+        delete.text = " ";
+        untracked.text = "";
+        topdelete.text = "󱂥 ";
+        changedelete.text = "󱂧 ";
       };
     };
   };
