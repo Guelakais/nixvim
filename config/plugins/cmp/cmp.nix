@@ -1,14 +1,13 @@
-{
+let
+  plugin_val = true;
+in {
   plugins = {
-    cmp-emoji = {
-      enable = true;
-    };
     cmp = {
-      enable = true;
+      enable = plugin_val;
       filetype = {
         sql.sources = [
-          { name = "buffer"; }
-          { name = "vim-dadbod-completion"; }
+          {name = "buffer";}
+          {name = "vim-dadbod-completion";}
         ];
       };
       settings = {
@@ -102,29 +101,21 @@
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-CR>" = "cmp.mapping.confirm({ select = true })";
           "<S-CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
-          "<Up>" = # lua
+          "<Up>" =
+            # lua
             "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-          "<Down>" = # lua
+          "<Down>" =
+            # lua
             "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
         };
       };
     };
-    cmp-nvim-lsp = {
-      enable = true;
-    }; # lsp
-    cmp-buffer = {
-      enable = true;
-    };
-    cmp-path = {
-      enable = true;
-    }; # file system paths
-    cmp_luasnip = {
-      enable = true;
-    }; # snippets
-    cmp-cmdline = {
-      enable = true;
-
-    }; # autocomplete for cmdline
+    cmp-emoji.enable = plugin_val;
+    cmp-nvim-lsp.enable = plugin_val;
+    cmp-buffer.enable = plugin_val;
+    cmp-path.enable = plugin_val;
+    cmp_luasnip.enable = plugin_val;
+    cmp-cmdline.enable = plugin_val;
   };
   extraConfigLua = ''
         luasnip = require("luasnip")
