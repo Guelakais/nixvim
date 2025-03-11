@@ -251,11 +251,9 @@
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
-        "minty": "minty",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "pre-commit-hooks": "pre-commit-hooks",
-        "volt": "volt"
+        "pre-commit-hooks": "pre-commit-hooks"
       }
     },
     "systems": {
