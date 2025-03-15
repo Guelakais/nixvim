@@ -14,9 +14,6 @@ in {
         autoEnableSources = true;
         completion.completeopt = "menu,menuone,noinsert";
         experimental.ghost_text = true;
-        experimental = {
-          ghost_text = true;
-        };
         performance = {
           debounce = 60;
           fetchingTimeout = 200;
