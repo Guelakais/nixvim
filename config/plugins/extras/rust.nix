@@ -9,7 +9,7 @@
       };
     };
     rustaceanvim = {
-      enable = true;
+      enable = false;
       settings = {
         tools.enable_clippy = true;
         server = {

@@ -14,6 +14,9 @@
       inlayHints = true;
       servers = {
         ansiblels.enable = true;
+        bashls.enable = true;
+        dockerls.enable = true;
+        cssls.enable = true;
         gopls.enable = true;
         html.enable = true;
         helm_ls = {
@@ -34,6 +37,11 @@
         nil_ls.enable = true;
         nushell.enable = true;
         ruff.enable = true;
+        rust_analyzer = {
+          enable = true;
+          installRustc = true;
+          installCargo = true;
+        };
         terraformls.enable = true;
         tinymist.enable = true;
         ts_ls.enable = true;

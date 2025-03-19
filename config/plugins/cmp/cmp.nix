@@ -15,8 +15,7 @@ in {
         completion.completeopt = "menu,menuone,noinsert";
         experimental.ghost_text = true;
         performance = {
-          debounce = 60;
-          fetchingTimeout = 200;
+          debounce = 150;
           maxViewEntries = 30;
         };
         snippet.expand = ''
