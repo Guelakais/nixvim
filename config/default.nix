@@ -18,6 +18,7 @@ _: {
 
     # Snippets
     ./plugins/snippets/luasnip.nix
+    ./plugins/snippets/friendly.nix
 
     # Editor plugins and configurations
     ./plugins/editor/neo-tree.nix

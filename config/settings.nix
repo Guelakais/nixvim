@@ -21,6 +21,8 @@
       # Use the system clipboard
       clipboard = "unnamedplus";
 
+      colorcolumn = "80";
+
       # Number of spaces that represent a <TAB>
       tabstop = 2;
       softtabstop = 2;
