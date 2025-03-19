@@ -1,3 +1,3 @@
 {
-  plugins.render_markdown.enable = true;
+  plugins.render-markdown.enable = true;
 }
