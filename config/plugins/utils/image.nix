@@ -1,7 +1,7 @@
 {
   plugins.image = {
     enable = true;
-    backend = "kitty";
+    backend = "ueberzug";
     hijackFilePatterns = [
       "*.png"
       "*.jpg"
@@ -13,6 +13,7 @@
     tmuxShowOnlyInActiveWindow = true;
     integrations = {
       markdown = {
+        clearInInsertMode = true;
         enabled = true;
         downloadRemoteImages = true;
         filetypes = [
