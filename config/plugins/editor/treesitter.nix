@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   plugins.treesitter = {
     enable = true;
     settings = {
@@ -12,7 +11,7 @@
   };
 
   plugins.treesitter-textobjects = {
-    enable = false;
+    enable = true;
     select = {
       enable = true;
       lookahead = true;

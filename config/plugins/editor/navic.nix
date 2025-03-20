@@ -9,7 +9,7 @@ _: {
         autoAttach = true;
       };
       icons = {
-        Array = "󱃵  ";
+        Array = "";
         Boolean = "  ";
         Class = "  ";
         Constant = "  ";
