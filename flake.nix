@@ -42,8 +42,7 @@
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {
           inherit pkgs;
-          module = import ./config; # import the module directly
-          # You can use `extraSpecialArgs` to pass additional arguments to your module files
+          module = import ./config;
           extraSpecialArgs = {
             inherit inputs;
           };
@@ -69,6 +68,22 @@
 
         devShells = {
           default = with pkgs; mkShell {inherit (self'.checks.pre-commit-check) shellHook;};
+        };
+      };
+
+      # Add NixOS module for fonts
+      flake = {
+        nixosModules.default = {pkgs, ...}: {
+          fonts.packages =
+            (with pkgs.nerd-fonts; [
+              _0xproto
+              symbols-only
+            ])
+            ++ (with pkgs; [
+              fira-code
+              font-awesome
+              noto-fonts-color-emoji
+            ]);
         };
       };
     };
