@@ -1,26 +1,22 @@
 {
   plugins.image = {
     enable = true;
-    backend = "kitty";
-    hijackFilePatterns = [
-      "*.png"
-      "*.jpg"
-      "*.jpeg"
-      "*.gif"
-      "*.webp"
-    ];
-    maxHeightWindowPercentage = 25;
-    tmuxShowOnlyInActiveWindow = true;
-    integrations = {
-      markdown = {
-        enabled = true;
-        downloadRemoteImages = true;
-        filetypes = [
-          "markdown"
-          "vimwiki"
-          "mdx"
-        ];
+    settings = {
+      backend = "kitty";
+      hijack_file_patterns = [
+        "*.png"
+        "*.jpg"
+        "*.jpeg"
+        "*.gif"
+        "*.webp"
+      ];
+      integrations = {
+        css.enable = true;
+        html.enable = true;
+        markdown.enable = true;
+        typst.enable = true;
       };
+      max_height_window_percentage = 25;
     };
   };
 }
